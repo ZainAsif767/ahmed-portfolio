@@ -3,10 +3,12 @@ import { staggerContainer } from "../../lib/animation";
 import React, { type ReactNode } from "react";
 
 interface AnimatedSectionProps {
+  id?: string;
   children: ReactNode;
   className?: string;
   staggerDelay?: number;
   initialDelay?: number;
+  ref?: React.RefObject<HTMLDivElement>;
 }
 
 export const AnimatedSection = ({
@@ -14,6 +16,7 @@ export const AnimatedSection = ({
   className = "",
   staggerDelay = 0.05,
   initialDelay = 0.2,
+  ref,
 }: AnimatedSectionProps) => {
   return (
     <motion.section
@@ -22,6 +25,7 @@ export const AnimatedSection = ({
       whileInView="show"
       viewport={{ once: true, amount: 0.25 }}
       className={className}
+      ref={ref}
     >
       {children}
     </motion.section>
@@ -97,7 +101,7 @@ export const AnimatedText = ({
 };
 
 interface AnimatedElementProps {
-  children: ReactNode;
+  children?: ReactNode;
   variants?: Variants;
   delay?: number;
   className?: string;
@@ -137,6 +141,7 @@ export const AnimatedElement = ({
 };
 
 interface AnimatedCardProps {
+  variants?: Variants;
   children: ReactNode;
   className?: string;
   onClick?: () => void;
@@ -144,6 +149,7 @@ interface AnimatedCardProps {
 
 // Export a reusable component for card-like elements with hover animations
 export const AnimatedCard = ({
+  variants,
   children,
   className = "",
   onClick,
@@ -169,6 +175,7 @@ export const AnimatedCard = ({
   // Full animations for desktop
   return (
     <motion.div
+      variants={variants}
       className={className}
       whileHover={{
         y: -10,

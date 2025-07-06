@@ -37,12 +37,12 @@ const EmploymentStatus = () => {
               <AnimatedElement variants={fadeIn("up", 0.4) as Variants}>
                 <div className="pl-8 md:pl-12 mb-2">
                   <span className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-blue-400 to-blue-500 text-transparent bg-clip-text">
-                    Full Stack Engineer,
+                    Software Engineer,
                   </span>
                 </div>
                 <div className="pl-8 md:pl-12">
                   <span className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-blue-400 to-indigo-400 text-transparent bg-clip-text">
-                    Cloud Engineer,
+                    Full Stack Engineer,
                   </span>
                 </div>
               </AnimatedElement>
