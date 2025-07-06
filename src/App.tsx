@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Outlet } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { ThemeProvider } from "./components/Themeprovider";
+import RatLoader from "./components/RatLoader";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -10,7 +11,7 @@ function App() {
     // Simulate loading time
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 1000);
+    }, 2000);
     return () => clearTimeout(timer);
   }, []);
 
@@ -32,17 +33,9 @@ function App() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
             >
-              <motion.div
-                className="w-16 h-16 border-t-4 border-b-4 border-blue-600 rounded-full"
-                animate={{ rotate: 360 }}
-                transition={{
-                  duration: 1.5,
-                  repeat: Infinity,
-                  ease: "linear",
-                }}
-              />
+              <RatLoader />
               <motion.p
-                className="mt-4 text-blue-600 font-medium"
+                className="mt-4 text-blue-600 dark:text-blue-400 font-medium"
                 animate={{ opacity: [0.5, 1, 0.5] }}
                 transition={{
                   duration: 1.5,
