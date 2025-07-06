@@ -102,14 +102,6 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to="/publications"
-                  className="text-gray-600 dark:text-gray-400 hover:text-blue-600 transition-colors"
-                >
-                  Publications
-                </Link>
-              </li>
-              <li>
-                <Link
                   to="/contact"
                   className="text-gray-600 dark:text-gray-400 hover:text-blue-600 transition-colors"
                 >
@@ -132,7 +124,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="pt-6 border-gray-200 dark:border-gray-800 text-center text-gray-600 dark:text-gray-400">
-          Thanks for visit ✨
+          Thanks for visiting ✨
         </div>
       </div>
     </footer>
