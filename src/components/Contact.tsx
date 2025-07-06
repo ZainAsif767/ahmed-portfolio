@@ -34,7 +34,7 @@ const Contact = () => {
     setIsSubmitting(true);
 
     try {
-      const formSubmitUrl = "https://formsubmit.co/ahmedismail19@gmail.com";
+      const formSubmitUrl = "https://formsubmit.co/iamahmedismail19@gmail.com";
       const formSubmitData = new FormData(e.target as HTMLFormElement);
       formSubmitData.append("_captcha", "false");
       formSubmitData.append("_redirect", "false");
@@ -62,8 +62,8 @@ const Contact = () => {
   const contactDetails = [
     {
       title: "Email",
-      content: "ahmedismail19@gmail.com",
-      link: "mailto:ahmedismail19@gmail.com",
+      content: "iamahmedismail19@gmail.com",
+      link: "mailto:iamahmedismail19@gmail.com",
       icon: <Mail className="h-6 w-6" />,
     },
     {

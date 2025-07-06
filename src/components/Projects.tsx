@@ -351,7 +351,7 @@ const Projects = () => {
           <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
             <Button asChild className="relative overflow-hidden">
               <a
-                href="https://github.com/ahmedismail"
+                href="https://github.com/imahmedismail"
                 target="_blank"
                 rel="noopener noreferrer"
               >

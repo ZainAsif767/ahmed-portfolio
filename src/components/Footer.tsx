@@ -36,7 +36,7 @@ const Footer = () => {
             <div className="flex space-x-2">
               <Button variant="ghost" size="icon" asChild>
                 <a
-                  href="https://github.com/ahmedismail"
+                  href="https://github.com/imahmedismail"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="GitHub"
@@ -46,7 +46,7 @@ const Footer = () => {
               </Button>
               <Button variant="ghost" size="icon" asChild>
                 <a
-                  href="https://linkedin.com/in/ahmedismail"
+                  href="https://www.linkedin.com/in/muhammad-ahmed-ismail-6418b9148/"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="LinkedIn"
@@ -55,7 +55,7 @@ const Footer = () => {
                 </a>
               </Button>
               <Button variant="ghost" size="icon" asChild>
-                <a href="mailto:ahmedismail19@gmail.com" aria-label="Email">
+                <a href="mailto:iamahmedismail19@gmail.com" aria-label="Email">
                   <Mail className="h-5 w-5" />
                 </a>
               </Button>
@@ -115,7 +115,7 @@ const Footer = () => {
             <h3 className="font-semibold text-lg mb-4">Contact</h3>
             <div className="space-y-2">
               <p className="text-gray-600 dark:text-gray-400">
-                ahmedismail19@gmail.com
+                iamahmedismail19@gmail.com
               </p>
               <p className="text-gray-600 dark:text-gray-400">
                 +92 317 7016196

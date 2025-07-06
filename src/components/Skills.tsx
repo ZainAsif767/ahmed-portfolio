@@ -11,18 +11,40 @@ const Skills = () => {
       icon: <Monitor className="h-6 w-6" />,
       skills: [
         {
+          name: "Phoenix",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/phoenix/phoenix-original.svg",
+        },
+        {
+          name: "Ruby on Rails",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/rails/rails-original-wordmark.svg",
+        },
+        {
           name: "JavaScript",
-          icon: "/skills-logo/javascript-logo.png",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg",
         },
         { name: "Tailwind CSS", icon: "/skills-logo/Tailwind CSS.png" },
         { name: "HTML", icon: "/skills-logo/html-logo.png" },
         { name: "CSS", icon: "/skills-logo/css-logo.png" },
+        {
+          name: "AlpineJS",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/alpinejs/alpinejs-original.svg",
+        },
       ],
     },
     {
       name: "Backend",
       icon: <Server className="h-6 w-6" />,
-      skills: [{ name: "GraphQL", icon: "/skills-logo/graphql-logo.png" }],
+      skills: [
+        { name: "GraphQL", icon: "/skills-logo/graphql-logo.png" },
+        {
+          name: "Elixir",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/elixir/elixir-original.svg",
+        },
+        {
+          name: "Ruby",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/ruby/ruby-original.svg",
+        },
+      ],
     },
     {
       name: "Database",
@@ -30,7 +52,15 @@ const Skills = () => {
       skills: [
         { name: "MongoDB", icon: "/skills-logo/MongoDB-logo.png" },
         { name: "MY SQL", icon: "/skills-logo/mysql-logo.png" },
+        {
+          name: "SQLite",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sqlite/sqlite-original.svg",
+        },
         { name: "PostgreSQL", icon: "/skills-logo/PostgresSQL.png" },
+        {
+          name: "MariaDB",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mariadb/mariadb-original-wordmark.svg",
+        },
       ],
     },
     {
@@ -41,6 +71,14 @@ const Skills = () => {
         { name: "Firebase", icon: "/skills-logo/firebase-logo.png" },
         { name: "Git", icon: "/skills-logo/git.png" },
         { name: "Docker", icon: "/skills-logo/Docker.png" },
+        {
+          name: "RabbitMQ",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/rabbitmq/rabbitmq-original.svg",
+        },
+        {
+          name: "Apache Kafka",
+          icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/apachekafka/apachekafka-original.svg",
+        },
       ],
     },
   ];

@@ -162,7 +162,7 @@ const Hero = () => {
             <motion.div whileHover={{ y: -5 }} whileTap={{ y: 0 }}>
               <Button variant="ghost" size="icon" asChild className="relative">
                 <a
-                  href="https://github.com/ahmedismail"
+                  href="https://github.com/imahmedismail"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="GitHub"
@@ -178,7 +178,7 @@ const Hero = () => {
             <motion.div whileHover={{ y: -5 }} whileTap={{ y: 0 }}>
               <Button variant="ghost" size="icon" asChild className="relative">
                 <a
-                  href="https://linkedin.com/in/ahmedismail"
+                  href="https://www.linkedin.com/in/muhammad-ahmed-ismail-6418b9148/"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="LinkedIn"

@@ -66,7 +66,7 @@ const About = () => {
               <div>
                 <h4 className="font-semibold mb-2">Email:</h4>
                 <p className="text-gray-600 dark:text-gray-400">
-                  ahmedismail19@gmail.com
+                  iamahmedismail19@gmail.com
                 </p>
               </div>
 

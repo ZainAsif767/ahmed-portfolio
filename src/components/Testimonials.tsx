@@ -149,7 +149,7 @@ const Testimonials = () => {
                       .map((paragraph, i) => (
                         <p
                           key={i}
-                          className="mb-3 text-gray-700 dark:text-gray-300"
+                          className="mb-3 text-gray-900 dark:text-gray-500"
                         >
                           {paragraph}
                         </p>
