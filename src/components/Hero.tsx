@@ -46,7 +46,7 @@ const Hero = () => {
   return (
     <section id="home" className="relative py-16 md:py-24">
       {/* Background with overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-blue-600/5 to-white/80 dark:to-gray-900/80 -z-10"></div>
+      <div className="absolute inset-0  -z-10"></div>
 
       {/* Decorative Elements */}
       <AnimatedDecoration

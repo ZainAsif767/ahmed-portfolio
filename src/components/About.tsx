@@ -78,7 +78,7 @@ const About = () => {
                     href=""
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center px-2.5 py-1 bg-gradient-to-r from-blue-50 to-blue-100 dark:from-blue-900/30 dark:to-blue-800/40 text-blue-600 dark:text-blue-400 rounded-md hover:from-blue-100 hover:to-blue-200 dark:hover:from-blue-900/40 dark:hover:to-blue-800/50 transition-all duration-300 hover:shadow-md group"
+                    className="inline-flex items-center px-2.5 py-1 bg-gradient-to-r from-blue-50 to-blue-100 dark:from-blue-500/10 dark:to-blue-700/10 text-blue-600 dark:text-blue-400 rounded-md hover:from-blue-100 hover:to-blue-200 dark:hover:from-blue-900/40 dark:hover:to-blue-800/50 transition-all duration-300 hover:shadow-md group"
                   >
                     <span className="relative inline-flex h-2 w-2 mr-2">
                       <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>

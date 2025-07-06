@@ -143,7 +143,7 @@ const Sidebar = () => {
                 variant="ghost"
                 size="icon"
                 onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-                className="mt-8 text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400"
+                className="mt-8 cursor-pointer text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400"
                 aria-label="Toggle theme"
               >
                 {theme === "dark" ? (
