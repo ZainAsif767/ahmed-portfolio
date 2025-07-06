@@ -17,6 +17,10 @@ const Footer = () => {
     }
   };
 
+  const handleHomeClick = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <footer className="py-12 border-t border-gray-200 dark:border-gray-800 relative z-10">
       <div className="container md:pl-24">
@@ -64,6 +68,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/"
+                  onClick={handleHomeClick}
                   className="text-gray-600 dark:text-gray-400 hover:text-blue-600 transition-colors"
                 >
                   Home
