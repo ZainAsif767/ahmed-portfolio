@@ -58,7 +58,7 @@ const Projects = () => {
   // Optimize background animations for mobile
 
   return (
-    <AnimatedSection className="py-8 md:py-24 relative overflow-hidden">
+    <AnimatedSection className="py-8 md:py-10 relative overflow-hidden">
       <div className="container px-4" ref={sectionRef}>
         <motion.div
           initial={{ opacity: 0, y: -20 }}
