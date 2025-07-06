@@ -12,7 +12,7 @@ const MainLayout = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen">
       <ScrollToTop />
       <Sidebar />
       {/* Main content wrapper with padding to account for sidebar */}
