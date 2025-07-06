@@ -55,12 +55,6 @@ const Footer = () => {
                   <Mail className="h-5 w-5" />
                 </a>
               </Button>
-              {/* medium */}
-              {/* <Button variant="ghost" size="icon" asChild>
-                <a href="https://muhammadamas.medium.com" aria-label="Medium">
-                  <Medium className="h-5 w-5" />
-                </a>
-              </Button> */}
             </div>
           </div>
 

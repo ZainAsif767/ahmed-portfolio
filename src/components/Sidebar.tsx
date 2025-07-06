@@ -87,7 +87,7 @@ const Sidebar = () => {
         <div className="container flex items-center justify-between">
           <Tooltip>
             <Link to="/" className="text-2xl font-bold">
-              <span className="text-blue-600">Amas</span>
+              <span className="text-blue-600">Ahmed</span>
             </Link>
             <TooltipTrigger asChild>
               <Button

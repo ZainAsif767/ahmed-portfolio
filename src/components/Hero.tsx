@@ -68,7 +68,7 @@ const Hero = () => {
         <div />
       </AnimatedDecoration>
 
-      <div className="container px-4 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+      <div className="container px-4 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center py-24 md:py-0">
         <motion.div
           variants={fadeIn("right", 0.3) as Variants}
           initial="hidden"
@@ -205,7 +205,7 @@ const Hero = () => {
             <div className="glass rounded-2xl p-4 w-[400px] h-[400px] overflow-hidden">
               <motion.img
                 src="/logo.jpeg"
-                alt="Muhammad Amas"
+                alt="Ahmed Ismail"
                 className="w-full h-full object-cover rounded-xl"
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.5 }}
