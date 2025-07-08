@@ -8,21 +8,7 @@ import {
 import { Button } from "./ui/button";
 import { fadeIn } from "../lib/animation";
 import { ChevronLeft, ChevronRight, Quote, Linkedin } from "lucide-react";
-
-const testimonials = [
-  {
-    id: 0,
-    name: "Syed Zain Asif",
-    position: "Software Engineer, IOMechs",
-    relationship: "Co-worker",
-    date: "Jan 2025",
-    linkedin: "https://www.linkedin.com/in/zainasif767",
-    image:
-      "https://ui-avatars.com/api/?name=Zain+Asif&background=0D8ABC&color=fff",
-    content:
-      "I've worked with Ahmed on multiple projects and he's always been a great asset to the team. He's a quick learner and always willing to take on new challenges. He's also a great problem solver and always finds a way to get the job done. I highly recommend Ahmed for any project you have!",
-  },
-];
+import { testimonials } from "../data/testimonials";
 
 const Testimonials = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
