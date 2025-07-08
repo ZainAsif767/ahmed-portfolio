@@ -75,7 +75,7 @@ const Contact = () => {
   ];
 
   return (
-    <section className="w-full py-8 bg-gradient-to-b from-background to-background/80">
+    <section className="w-full py-8 md:py-10 bg-gradient-to-b from-background to-background/80">
       <div className="container px-4 md:px-6 mx-auto">
         <motion.div
           initial={{ opacity: 0, y: -20 }}

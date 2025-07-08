@@ -7,6 +7,7 @@ import MainLayout from "./components/layout/MainLayout.js";
 import HomePage from "./pages/HomePage";
 import ProjectsPage from "./pages/ProjectsPage";
 import ContactPage from "./pages/ContactPage";
+import ExperiencePage from "./pages/ExperiencePage.js";
 
 const router = createBrowserRouter([
   {
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
           {
             path: "contact",
             element: <ContactPage />,
+          },
+          {
+            path: "experience",
+            element: <ExperiencePage />,
           },
         ],
       },

@@ -42,7 +42,7 @@ const Experience = () => {
   };
 
   return (
-    <AnimatedSection id="experience" className="py-20">
+    <AnimatedSection id="experience" className="py-16 md:py-10">
       <div className="container mx-auto px-4">
         <motion.div
           variants={fadeInUp as Variants}
