@@ -31,11 +31,14 @@ const POINT_VERT = /* glsl */ `
 const POINT_FRAG = /* glsl */ `
   varying vec3 vColor;
   varying float vAlpha;
+  uniform float uGlow;
   void main() {
     float d = length(gl_PointCoord - 0.5) * 2.0;
     if (d > 1.0) discard;
     float core = smoothstep(1.0, 0.0, d);
-    gl_FragColor = vec4(vColor, vAlpha * (0.25 + 0.75 * core * core));
+    float glow = vAlpha * (0.25 + 0.75 * core * core);
+    float crisp = vAlpha * smoothstep(1.0, 0.7, d);
+    gl_FragColor = vec4(vColor, mix(crisp, glow, uGlow));
   }
 `;
 
@@ -119,7 +122,7 @@ export default function ProcessNetwork() {
         fragmentShader: POINT_FRAG,
         transparent: true,
         depthWrite: false,
-        uniforms: { uScale: { value: 300 } },
+        uniforms: { uScale: { value: 300 }, uGlow: { value: 1 } },
       });
       const pts = new THREE.Points(geo, mat);
       pts.frustumCulled = false;
@@ -155,9 +158,10 @@ export default function ProcessNetwork() {
       crash.set(c.crash);
       const blending = light ? THREE.NormalBlending : THREE.AdditiveBlending;
       nodes.mat.blending = pulses.mat.blending = blending;
+      nodes.mat.uniforms.uGlow.value = pulses.mat.uniforms.uGlow.value = light ? 0 : 1;
       nodes.mat.needsUpdate = pulses.mat.needsUpdate = true;
       lineMat.color.copy(accent);
-      lineMat.opacity = light ? 0.12 : 0.07;
+      lineMat.opacity = light ? 0.35 : 0.07;
       lineMat.blending = blending;
       lineMat.needsUpdate = true;
     };
@@ -235,7 +239,7 @@ export default function ProcessNetwork() {
           }
         }
         nColor.setXYZ(i, tmp.r, tmp.g, tmp.b);
-        nSize.setX(i, size * 4);
+        nSize.setX(i, size * (isLight() ? 2.2 : 4));
         nAlpha.setX(i, 0.7);
       }
       nColor.needsUpdate = nSize.needsUpdate = nAlpha.needsUpdate = true;
@@ -261,7 +265,7 @@ export default function ProcessNetwork() {
           a.z + (b.z - a.z) * p.t,
         );
         pColor.setXYZ(i, accent.r, accent.g, accent.b);
-        pSize.setX(i, 3.5);
+        pSize.setX(i, isLight() ? 2.4 : 3.5);
       }
       pPos.needsUpdate = pColor.needsUpdate = pSize.needsUpdate = true;
 
