@@ -4,6 +4,7 @@ import Experience from "@/components/Experience";
 import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
+import ProcessNetworkLoader from "@/components/ProcessNetworkLoader";
 import Projects from "@/components/Projects";
 import Services from "@/components/Services";
 import Skills from "@/components/Skills";
@@ -11,6 +12,7 @@ import Skills from "@/components/Skills";
 export default function Home() {
   return (
     <>
+      <ProcessNetworkLoader />
       <Navbar />
       <main>
         <Hero />
