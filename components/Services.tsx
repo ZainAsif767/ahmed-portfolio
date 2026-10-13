@@ -1,6 +1,6 @@
 import Reveal from "./Reveal";
 import SectionHeading from "./SectionHeading";
-import { services } from "@/lib/data";
+import { principles, services } from "@/lib/data";
 
 export default function Services() {
   return (
@@ -31,6 +31,22 @@ export default function Services() {
             </Reveal>
           ))}
         </div>
+
+        <Reveal className="mt-14">
+          <div className="mb-6 flex items-center gap-3 font-mono text-xs text-muted-2">
+            <span className="text-accent">+</span>
+            <span className="uppercase tracking-[0.18em]">how i work</span>
+            <span className="h-px flex-1 bg-line" aria-hidden />
+          </div>
+          <div className="grid gap-x-8 gap-y-6 sm:grid-cols-2 lg:grid-cols-4">
+            {principles.map((p) => (
+              <div key={p.title}>
+                <h4 className="font-display text-[16px] font-semibold">{p.title}</h4>
+                <p className="mt-1.5 text-sm leading-relaxed text-muted">{p.text}</p>
+              </div>
+            ))}
+          </div>
+        </Reveal>
       </div>
     </section>
   );

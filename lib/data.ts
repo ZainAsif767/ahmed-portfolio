@@ -122,6 +122,13 @@ export const services = [
   },
 ];
 
+export const principles = [
+  { title: "OTP-first", text: "Supervise everything. Let it crash, restart cleanly, keep serving." },
+  { title: "Boring where it counts", text: "Proven tools for data and infra; novelty only where it pays off." },
+  { title: "Tested and automated", text: "ExUnit, CI/CD and small reviewable changes keep shipping safe." },
+  { title: "Teach as I go", text: "Mentoring and clear code so the whole team gets stronger." },
+];
+
 export const skillGroups = [
   {
     title: "Backend",
@@ -155,6 +162,8 @@ export type Project = {
   description: string;
   impact?: string;
   tags: string[];
+  highlights?: string[];
+  caseStudy?: { problem: string; approach: string; result: string };
   url?: string;
   node: string;
   featured: boolean;
@@ -171,6 +180,12 @@ export const projects: Project[] = [
       "Built real-time monitoring interfaces with LiveView that surface threats to security teams as they happen.",
     tags: ["Phoenix", "Elixir", "LiveView", "PostgreSQL"],
     url: "https://www.catchpole.io",
+    highlights: ["Multi-tenant", "Real-time", "Security"],
+    caseStudy: {
+      problem: "Security teams need threats surfaced the moment they happen, not on the next page refresh.",
+      approach: "LiveView interfaces fed by Phoenix's fault-tolerant runtime, so monitoring keeps streaming even when individual components fail.",
+      result: "Real-time monitoring UIs that put threat data in front of security teams as it happens.",
+    },
     featured: true,
   },
   {
@@ -183,6 +198,12 @@ export const projects: Project[] = [
       "Shipped booking, gallery and invoicing features used by professional photographers to run their day-to-day business.",
     tags: ["Elixir", "Phoenix", "LiveView", "Alpine.js", "Tailwind"],
     url: "https://www.picsello.com/",
+    highlights: ["SaaS", "Payments", "Galleries"],
+    caseStudy: {
+      problem: "Photographers juggle bookings, clients, invoices and gallery delivery across separate tools.",
+      approach: "One LiveView app with Alpine.js for small interactions: booking, scheduling, invoicing and automated gallery delivery in a single flow.",
+      result: "Booking, gallery and invoicing features used by professional photographers to run their business day to day.",
+    },
     featured: true,
   },
   {
@@ -194,6 +215,12 @@ export const projects: Project[] = [
     impact:
       "Spearheaded development end to end, from background-worker pricing engines to live tracking UIs.",
     tags: ["Elixir", "Phoenix", "LiveView", "PostgreSQL", "WebSockets"],
+    highlights: ["Multi-tenant", "WebSockets", "Pricing engine"],
+    caseStudy: {
+      problem: "Freight booking needs prices that change with the shipment and tracking that customers can trust in real time.",
+      approach: "Multi-tenant PostgreSQL schemas, background workers for the dynamic pricing engine, and WebSocket-driven live tracking.",
+      result: "A B2B platform connecting logistics providers and customers, built end to end.",
+    },
     featured: true,
   },
   {
@@ -206,6 +233,12 @@ export const projects: Project[] = [
       "Delivered learning experiences for a platform that trains entrepreneurs and managers across Africa.",
     tags: ["Elixir", "Phoenix", "GraphQL", "Absinthe"],
     url: "https://africanmanagers.org/",
+    highlights: ["120+ tables", "GraphQL", "Long-lived codebase"],
+    caseStudy: {
+      problem: "A large, long-lived codebase had to keep delivering training to entrepreneurs and managers across Africa.",
+      approach: "Maintained and extended the Elixir codebase and its Absinthe GraphQL APIs across 120+ database tables.",
+      result: "Stable learning experiences for a pan-African professional development platform.",
+    },
     featured: true,
   },
   {

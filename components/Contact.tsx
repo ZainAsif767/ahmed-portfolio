@@ -1,4 +1,4 @@
-import { Mail } from "lucide-react";
+import { Download, Mail } from "lucide-react";
 import Reveal from "./Reveal";
 import { site } from "@/lib/data";
 
@@ -34,13 +34,21 @@ export default function Contact() {
                 roles. Tell me what you&apos;re building — I usually reply within
                 24 hours.
               </p>
-              <div className="mt-9">
+              <div className="mt-9 flex flex-wrap items-center justify-center gap-3.5">
                 <a
                   href={`mailto:${site.email}`}
                   className="inline-flex max-w-full items-center gap-2.5 rounded-xl bg-accent px-4 py-3.5 text-[13.5px] font-semibold text-accent-ink transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_10px_30px_rgba(74,222,128,0.3)] sm:px-6 sm:text-[15px]"
                 >
                   <Mail size={16} className="shrink-0" />
                   <span className="truncate">{site.email}</span>
+                </a>
+                <a
+                  href={site.resumeFile}
+                  download="Ahmed-Ismail-Resume.pdf"
+                  className="inline-flex items-center gap-2 rounded-xl border border-line-2 px-4 py-3.5 text-[13.5px] font-semibold transition-all duration-200 hover:-translate-y-0.5 hover:border-muted-2 hover:bg-fg/5 sm:px-6 sm:text-[15px]"
+                >
+                  <Download size={16} />
+                  Résumé
                 </a>
               </div>
               <div className="mt-10 flex flex-wrap items-center justify-center gap-x-2 gap-y-2 font-mono text-[13px]">

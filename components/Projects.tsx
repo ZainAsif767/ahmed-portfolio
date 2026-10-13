@@ -53,20 +53,56 @@ export default function Projects() {
                       {project.impact}
                     </p>
                   )}
+                  {project.highlights && (
+                    <div className="mt-4 flex flex-wrap gap-2">
+                      {project.highlights.map((h) => (
+                        <span
+                          key={h}
+                          className="rounded-md border border-accent/30 bg-accent-soft px-2 py-0.5 font-mono text-[11px] text-accent"
+                        >
+                          {h}
+                        </span>
+                      ))}
+                    </div>
+                  )}
                   <div className="mt-4 font-mono text-xs text-muted-2">
                     {project.tags.join(" · ")}
                   </div>
+                  {project.caseStudy && (
+                    <details className="group/cs mt-5">
+                      <summary className="inline-flex cursor-pointer list-none items-center gap-1.5 font-mono text-[12.5px] text-accent hover:underline">
+                        <span className="transition-transform group-open/cs:rotate-90">▸</span>
+                        case study
+                      </summary>
+                      <dl className="mt-4 grid gap-4 border-l border-line-2 pl-5 text-[14.5px] leading-relaxed">
+                        {(["problem", "approach", "result"] as const).map((k) => (
+                          <div key={k}>
+                            <dt className="font-mono text-[11px] uppercase tracking-wider text-muted-2">
+                              {k}
+                            </dt>
+                            <dd className="mt-1 text-muted">{project.caseStudy![k]}</dd>
+                          </div>
+                        ))}
+                      </dl>
+                    </details>
+                  )}
                 </div>
                 <div className="self-start sm:pt-1">
                   {project.url ? (
-                    <span className="inline-flex items-center gap-1.5 rounded-xl border border-line-2 px-4 py-2.5 font-mono text-[13px] font-medium transition-colors duration-200 group-hover:border-accent group-hover:bg-accent group-hover:text-accent-ink">
+                    <a
+                      href={project.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`Visit ${project.name}`}
+                      className="inline-flex items-center gap-1.5 rounded-xl border border-line-2 px-4 py-2.5 font-mono text-[13px] font-medium transition-colors duration-200 hover:border-accent hover:bg-accent hover:text-accent-ink"
+                    >
                       visit
                       <ArrowUpRight
                         size={14}
                         strokeWidth={2.5}
                         className="transition-transform duration-200 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
                       />
-                    </span>
+                    </a>
                   ) : (
                     <span className="inline-flex rounded-xl border border-line px-4 py-2.5 font-mono text-[13px] text-muted-2">
                       private
@@ -77,19 +113,7 @@ export default function Projects() {
             );
             return (
               <Reveal key={project.name}>
-                {project.url ? (
-                  <a
-                    href={project.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={`Visit ${project.name}`}
-                    className="block"
-                  >
-                    {inner}
-                  </a>
-                ) : (
-                  inner
-                )}
+                {inner}
               </Reveal>
             );
           })}
